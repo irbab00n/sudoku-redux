@@ -10,4 +10,9 @@ app.use(express.static(_public));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${_public}/index.html`);
+});
+
 module.exports = app;

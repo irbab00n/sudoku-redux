@@ -12,14 +12,16 @@ import actions from './actions';
 
 import '../public/style.css';
 
+
 const store = createStore(
   reducers,
   applyMiddleware(thunk)
 );
 
-const mapDispatchToProps = (dispatch) => {
-  actions: bindActionCreators(actions, dispatch);
-};
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(actions, dispatch)
+});
+
 
 const ConnectedApp = connect(
   state => state,

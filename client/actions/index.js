@@ -1,4 +1,4 @@
-import exampleActions from './example';
+import * as exampleActions from './exampleActions';
 
 const actions = Object.assign(
   {},

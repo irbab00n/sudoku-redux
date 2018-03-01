@@ -1,6 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, hashHistory } from 'react-router-dom';
 
 import Sidebar from './components/Sidebar.jsx';
+import WelcomePage from './components/WelcomePage.jsx';
 
 
 export default class App extends React.Component {
@@ -14,9 +16,11 @@ export default class App extends React.Component {
 
       <div className="display-flex-row fh fw">
         <Sidebar />
-        <div className="display-flex-column fh fw">
-          Content
-        </div>
+        <Router history={hashHistory}>
+          <Switch>
+            <Route exact path="/" render={() => <WelcomePage />} />
+          </Switch>
+        </Router>
       </div>
 
     );
