@@ -1,0 +1,11 @@
+# Build files
+
+/public/bundle.js
+
+# Module files
+
+node_modules/
+
+#Package-lock
+
+package-lock.json

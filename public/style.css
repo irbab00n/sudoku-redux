@@ -1,0 +1,106 @@
+html, body {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-orange-default {
+  background-color: #f4511e;
+}
+
+.bg-orange-light {
+  background-color: #ff844c;
+}
+
+.bg-orange-dark {
+  background-color: #b91400;
+}
+
+.fh {
+  height: 100%;
+}
+
+.fw {
+  width: 100%;
+}
+
+/* Flexbox types */
+
+.display-flex-row {
+  display: flex;
+}
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flexbox alignments */
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.flex-align-end {
+  align-items: flex-end;
+}
+
+/* Flexbox content justifications */
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+
+
+#sidebar {
+  min-width: 125px;
+  max-width: 125px;
+}
+
+#sidebar-logo {
+  margin: 12.5px;
+  height: 100px;
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
