@@ -4,6 +4,14 @@ html, body {
   width: 100%;
 }
 
+svg:hover {
+  fill: #313131;
+}
+
+button:focus {
+  outline-color: #b91400;
+}
+
 .bg-orange-default {
   background-color: #f4511e;
 }
@@ -76,7 +84,23 @@ html, body {
   width: 100px;
 }
 
+#sidebar-navigation {
+  justify-content: space-evenly;
+  margin: 12.5px;
+  height: 337.5px;
+  width: 100px;
+}
 
+.sidebar-navigation-button {
+  border-radius: 5px;
+  border-width: 0px;
+  height: 100px;
+  width: 100px;
+}
+
+.sidebar-navigation-button:hover {
+  background-color: #ff844c;
+}
 
 
 

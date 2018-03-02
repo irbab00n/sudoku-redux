@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, hashHistory } from 'react-route
 
 import Sidebar from './components/Sidebar.jsx';
 import WelcomePage from './components/WelcomePage.jsx';
+import Puzzles from './components/Puzzles.jsx';
 
 
 export default class App extends React.Component {
@@ -19,6 +20,7 @@ export default class App extends React.Component {
         <Router history={hashHistory}>
           <Switch>
             <Route exact path="/" render={() => <WelcomePage />} />
+            <Route path="/puzzles" render={() => <Puzzles />} />
           </Switch>
         </Router>
       </div>
