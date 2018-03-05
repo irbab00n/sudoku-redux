@@ -4,7 +4,10 @@ const Puzzles = () => {
 
   return (
 
-    <div className="display-flex-column page-body fh fw">
+    <div className="display-flex-column flex-align-center page-body fh fw">
+      <h1 className="page-title">
+        All Puzzles
+      </h1>
       <div className="card-grid display-flex-column flex-justify-center">
         <div className="card display-flex-column flex-align-center flex-justify-center">
           Card

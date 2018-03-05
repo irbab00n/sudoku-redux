@@ -1,4 +1,6 @@
 html, body {
+  font-family: Gill Sans, sans-serif;
+  font-variant: small-caps;
   margin: auto;
   height: 100%;
   width: 100%;
@@ -48,7 +50,11 @@ div {
 .page-body {
   position: relative;
   left: 125px;
-  margin: 20px 145px 20px 20px;
+  margin: auto 145px auto 20px;
+}
+
+.page-title {
+
 }
 
 /* Flexbox types */
