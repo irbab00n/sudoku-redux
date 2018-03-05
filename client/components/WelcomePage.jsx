@@ -4,7 +4,11 @@ const WelcomePage = () => {
 
   return (
 
-    <div className="display-flex-column fh fw">Content</div>
+    <div className="display-flex-column flex-align-center page-body fh fw">
+      <h1 className="page-title">
+        Welcome to Sudoku Redux!
+      </h1>
+    </div>
 
   );
 

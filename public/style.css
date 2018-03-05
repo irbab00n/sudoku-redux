@@ -1,7 +1,30 @@
 html, body {
+  font-family: Gill Sans, sans-serif;
+  font-variant: small-caps;
   margin: auto;
   height: 100%;
   width: 100%;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+button:focus {
+  outline-color: #b91400;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .bg-orange-default {
@@ -22,6 +45,16 @@ html, body {
 
 .fw {
   width: 100%;
+}
+
+.page-body {
+  position: relative;
+  left: 125px;
+  margin: auto 145px auto 20px;
+}
+
+.page-title {
+
 }
 
 /* Flexbox types */
@@ -63,9 +96,11 @@ html, body {
   justify-content: space-around;
 }
 
-
+/* Sidebar */
 
 #sidebar {
+  position: fixed;
+  box-shadow: 2px 0px 4px #888888;
   min-width: 125px;
   max-width: 125px;
 }
@@ -76,11 +111,46 @@ html, body {
   width: 100px;
 }
 
+#sidebar-navigation {
+  justify-content: space-evenly;
+  margin: 12.5px;
+  height: 200px;
+  width: 100px;
+}
+
+.sidebar-navigation-button {
+  border-radius: 5px;
+  border-width: 0px;
+  height: 75px;
+  width: 75px;
+}
+
+.sidebar-navigation-button:hover {
+  background-color: #ff844c;
+  fill: #413131;
+}
+
+.sidebar-navigation-button > svg {
+  fill: inherit;
+}
 
 
+/* Card Grid */
 
+.card-grid {
+  margin: 50px auto auto 0;
+  display: grid;
+  width: 100%;
+  max-width: 1500px;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 25px;
+}
 
-
+.card {
+  height: 350px;
+  width: 400px;
+  background-color: rgba(155, 155, 155, 1.0);
+}
 
 
 
