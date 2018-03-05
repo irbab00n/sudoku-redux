@@ -4,12 +4,25 @@ html, body {
   width: 100%;
 }
 
-svg:hover {
-  fill: #313131;
+button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 button:focus {
   outline-color: #b91400;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .bg-orange-default {
@@ -30,6 +43,12 @@ button:focus {
 
 .fw {
   width: 100%;
+}
+
+.page-body {
+  position: relative;
+  left: 125px;
+  margin: 20px 145px 20px 20px;
 }
 
 /* Flexbox types */
@@ -71,9 +90,11 @@ button:focus {
   justify-content: space-around;
 }
 
-
+/* Sidebar */
 
 #sidebar {
+  position: fixed;
+  box-shadow: 2px 0px 4px #888888;
   min-width: 125px;
   max-width: 125px;
 }
@@ -87,24 +108,43 @@ button:focus {
 #sidebar-navigation {
   justify-content: space-evenly;
   margin: 12.5px;
-  height: 337.5px;
+  height: 200px;
   width: 100px;
 }
 
 .sidebar-navigation-button {
   border-radius: 5px;
   border-width: 0px;
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
 }
 
 .sidebar-navigation-button:hover {
   background-color: #ff844c;
+  fill: #413131;
+}
+
+.sidebar-navigation-button > svg {
+  fill: inherit;
 }
 
 
+/* Card Grid */
 
+.card-grid {
+  margin: 50px auto auto 0;
+  display: grid;
+  width: 100%;
+  max-width: 1500px;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 25px;
+}
 
+.card {
+  height: 350px;
+  width: 400px;
+  background-color: rgba(155, 155, 155, 1.0);
+}
 
 
 
