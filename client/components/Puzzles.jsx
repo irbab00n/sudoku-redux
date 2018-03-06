@@ -5,7 +5,7 @@ const Puzzles = () => {
   return (
 
     <div className="display-flex-column flex-align-center page-body fh fw">
-      <h1 className="page-title">
+      <h1 className="page-title no-select">
         All Puzzles
       </h1>
       <div className="card-grid display-flex-column flex-justify-center">

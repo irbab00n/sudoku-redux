@@ -9,12 +9,12 @@ export default class Sidebar extends React.Component {
 
     return (
 
-      <div id="sidebar" className="bg-orange-default display-flex-column fh fw">
+      <div id="sidebar" className="bg-orange-default display-flex-column flex-align-center fh fw">
         <span id="sidebar-logo" className="display-flex-row flex-align-center flex-justify-center bg-orange-dark no-select">
           LOGO
         </span>
 
-        <div id="sidebar-navigation" className="display-flex-column flex-justify-around flex-align-center">
+        <div id="sidebar-navigation" className="display-flex-column flex-justify-around flex-align-center fw">
 
           <a href="/">
             <label title="Go to the Home Page">
