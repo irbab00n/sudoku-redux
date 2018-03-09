@@ -15,7 +15,7 @@ export default class App extends React.Component {
 
     return (
 
-      <div className="display-flex-row fh fw">
+      <div className="app-body fh fw">
         <Sidebar />
         <Router history={hashHistory}>
           <Switch>

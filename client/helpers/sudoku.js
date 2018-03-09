@@ -1,4 +1,4 @@
-export default function checkGrid(grid) {
+const checkGrid = (grid) => {
     let range = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
     let testResult = true;
     
@@ -6,7 +6,7 @@ export default function checkGrid(grid) {
         grid.forEach(row => {
             let set = new Set(range);
             for (let i = 0; i < row.length; i++) {
-                if (row[i] === '.') {
+                if (row[i] === '') {
                     continue;
                 } else {
                     if (set.has(row[i])) {
@@ -25,7 +25,7 @@ export default function checkGrid(grid) {
         while(column < size) {
             let set = new Set(range);
             for (let i = 0; i < size; i++) {
-                if (grid[i][column] === '.') {
+                if (grid[i][column] === '') {
                     continue;
                 } else {
                     if (set.has(grid[i][column]) === true) {
@@ -78,7 +78,7 @@ export default function checkGrid(grid) {
             let column = 0;
             while(column < size) {
                 for (let i = 0; i < size; i++) {
-                    if (threeGrid[i][column] === '.') {
+                    if (threeGrid[i][column] === '') {
                         continue;
                     } else {
                         if (set.has(threeGrid[i][column])) {
@@ -99,3 +99,5 @@ export default function checkGrid(grid) {
     testGrids(cutGridsFromBlocks(cutBlocksFromGrid()));
     return testResult;
 }
+
+module.exports.checkGrid = checkGrid;

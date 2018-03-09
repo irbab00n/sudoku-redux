@@ -26,8 +26,8 @@ export default class PuzzleSquare extends React.Component {
 
     return (
 
-      <div className="grid-example fh fw display-flex-row flex-align-center flex-justify-center">
-        <input className="puzzle-box" value={this.state.value} onChange={(e) => {this.updateValue(e)}}/>
+      <div className="grid-item fh fw display-flex-row flex-align-center flex-justify-center">
+        <input className={`puzzle-box ${this.props.background}`} value={this.state.value} onChange={(e) => {this.updateValue(e)}}/>
       </div>
 
     );

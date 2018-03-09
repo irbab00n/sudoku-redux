@@ -4,7 +4,7 @@ const Puzzles = () => {
 
   return (
 
-    <div className="display-flex-column flex-align-center page-body fh fw">
+    <div className="display-flex-column flex-align-center page-body fh">
       <h1 className="page-title no-select">
         All Puzzles
       </h1>

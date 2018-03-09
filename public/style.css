@@ -59,8 +59,8 @@ li {
   margin: auto 145px auto 20px;
 }
 
-.page-title {
-
+.app-layout {
+  display: flex;
 }
 
 /* Flexbox types */
@@ -98,8 +98,18 @@ li {
   justify-content: space-between;
 }
 
+.flex-justify-evenly {
+  justify-content: space-evenly;
+}
+
 .flex-justify-around {
   justify-content: space-around;
+}
+
+/* Flexbox wraps */
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 /* Sidebar */
@@ -109,6 +119,7 @@ li {
   box-shadow: 2px 0px 4px #888888;
   min-width: 125px;
   max-width: 125px;
+  z-index: 3000;
 }
 
 #sidebar-logo {
@@ -163,29 +174,18 @@ li {
 
 
 .puzzle-grid {
-  min-width: 800px;
-  min-height: 800px;
   max-width: 1000px;
   max-height: 1000px;
-  width: 40vh;
-  height: 40vh;
+  width: 60vh;
+  height: 60vh;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto;
   grid-template-rows: auto auto auto auto auto auto auto auto auto;
-  background-color: #2196F3;
+  background-color: rgba(205, 205, 205, 1.0);
   padding: 10px;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-}
-
-.grid-example {
-  background-color: rgba(100, 195, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -197,6 +197,54 @@ li {
   border: none;
 }
 
+.grid-bg-normal {
+  background-color: rgba(255, 255, 255, 1.0);
+}
+
+.grid-bg-alt {
+  background-color: rgba(185, 185, 205, 1.0);
+}
+
+/* Signup */
+
+.signup-container {
+  margin-left: 20px;
+  max-width: 400px;
+  height: 60vh;
+}
+
+@media all and (max-width: 1160px) {
+  .signup-container {
+    margin-left: 0px;
+    max-width: none;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  #sidebar {
+    position: fixed;
+    width: 100%;
+    max-width: none;
+    height: 125px;
+    flex-direction: row;
+  }
+
+  #sidebar-navigation {
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+  }
+
+  .app-body {
+    flex-direction: column;
+  }
+
+  .page-body {
+    top: 125px;
+    left: 0px;
+    margin: auto;
+  }
+}
 
 
 

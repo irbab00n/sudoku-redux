@@ -7,3 +7,7 @@ export const updatePuzzleSquare = (coordinates, value) => ({
     value
   }
 });
+
+export const checkPuzzleSolution = () => ({
+  type: types.CHECK_PUZZLE_SOLUTION
+});
