@@ -15,11 +15,11 @@ export default class App extends React.Component {
 
     return (
 
-      <div className="display-flex-row fh fw">
+      <div className="app-body fh fw">
         <Sidebar />
         <Router history={hashHistory}>
           <Switch>
-            <Route exact path="/" render={() => <WelcomePage />} />
+            <Route exact path="/" render={() => <WelcomePage actions={this.props.actions} />} />
             <Route path="/puzzles" render={() => <Puzzles />} />
           </Switch>
         </Router>

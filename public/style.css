@@ -4,6 +4,7 @@ html, body {
   margin: auto;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
 }
 
 button {
@@ -18,6 +19,10 @@ button:focus {
 
 div {
   box-sizing: border-box;
+}
+
+li {
+  display: inline-block;
 }
 
 .no-select {
@@ -48,13 +53,14 @@ div {
 }
 
 .page-body {
+  overflow: scroll;
   position: relative;
   left: 125px;
   margin: auto 145px auto 20px;
 }
 
-.page-title {
-
+.app-layout {
+  display: flex;
 }
 
 /* Flexbox types */
@@ -92,8 +98,18 @@ div {
   justify-content: space-between;
 }
 
+.flex-justify-evenly {
+  justify-content: space-evenly;
+}
+
 .flex-justify-around {
   justify-content: space-around;
+}
+
+/* Flexbox wraps */
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 /* Sidebar */
@@ -103,6 +119,7 @@ div {
   box-shadow: 2px 0px 4px #888888;
   min-width: 125px;
   max-width: 125px;
+  z-index: 3000;
 }
 
 #sidebar-logo {
@@ -153,10 +170,81 @@ div {
 }
 
 
+/* Puzzle Grid */
 
 
+.puzzle-grid {
+  max-width: 1000px;
+  max-height: 1000px;
+  width: 60vh;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  background-color: rgba(205, 205, 205, 1.0);
+  padding: 10px;
+}
 
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
 
+.puzzle-box {
+  height: 92%;
+  width: 92%;
+  font-size: 4vh;
+  text-align: center;
+  border: none;
+}
+
+.grid-bg-normal {
+  background-color: rgba(255, 255, 255, 1.0);
+}
+
+.grid-bg-alt {
+  background-color: rgba(185, 185, 205, 1.0);
+}
+
+/* Signup */
+
+.signup-container {
+  margin-left: 20px;
+  max-width: 400px;
+  height: 60vh;
+}
+
+@media all and (max-width: 1160px) {
+  .signup-container {
+    margin-left: 0px;
+    max-width: none;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  #sidebar {
+    position: fixed;
+    width: 100%;
+    max-width: none;
+    height: 125px;
+    flex-direction: row;
+  }
+
+  #sidebar-navigation {
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+  }
+
+  .app-body {
+    flex-direction: column;
+  }
+
+  .page-body {
+    top: 125px;
+    left: 0px;
+    margin: auto;
+  }
+}
 
 
 
