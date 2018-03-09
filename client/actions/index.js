@@ -1,8 +1,9 @@
 import * as exampleActions from './exampleActions';
+import * as currentPuzzleActions from './currentPuzzleActions';
 
 const actions = Object.assign(
   {},
-  exampleActions
+  currentPuzzleActions
 );
 
 export default actions;

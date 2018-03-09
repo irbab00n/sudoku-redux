@@ -19,7 +19,7 @@ export default class App extends React.Component {
         <Sidebar />
         <Router history={hashHistory}>
           <Switch>
-            <Route exact path="/" render={() => <WelcomePage />} />
+            <Route exact path="/" render={() => <WelcomePage actions={this.props.actions} />} />
             <Route path="/puzzles" render={() => <Puzzles />} />
           </Switch>
         </Router>

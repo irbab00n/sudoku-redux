@@ -1,17 +1,28 @@
 import React from 'react';
 
-const WelcomePage = () => {
+import PuzzleBoard from './PuzzleBoard.jsx';
 
-  return (
+export default class WelcomePage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-    <div className="display-flex-column flex-align-center page-body fh fw">
-      <h1 className="page-title no-select">
-        Welcome to Sudoku Redux!
-      </h1>
-    </div>
+  render() {
 
-  );
+    return (
+
+      <div className="fh fw display-flex-column flex-align-center page-body ">
+        <h1 className="page-title no-select">
+          Welcome to Sudoku Redux!
+        </h1>
+        <div className="fw display-flex-column flex-align-center bg-orange-light">
+          <PuzzleBoard actions={this.props.actions}/>
+        </div>
+      </div>
+
+    );
+
+  }
+
 
 };
-
-export default WelcomePage;

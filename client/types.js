@@ -1,1 +1,6 @@
 export const EXAMPLE = 'EXAMPLE';
+
+// puzzles
+
+export const UPDATE_PUZZLE_SQUARE = 'UPDATE_PUZZLE_SQUARE';
+export const CHECK_PUZZLE_SOLUTION = 'CHECK_PUZZLE_SOLUTION'
