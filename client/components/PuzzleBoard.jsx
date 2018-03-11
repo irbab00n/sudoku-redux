@@ -49,8 +49,14 @@ export default class PuzzleBoard extends React.Component {
 
     return (
 
-        <div className="puzzle-grid">
-          {this.buildPuzzle()}
+        <div className="puzzle-container">
+          <div className="puzzle-grid">
+            {this.buildPuzzle()}
+          </div>
+
+          <div className="puzzle-options">
+            <button onClick={() => this.props.actions.checkPuzzleSolution()}>Submit Puzzle</button>
+          </div>
         </div>
 
     );

@@ -1,8 +1,6 @@
 import * as types from '../types';
 import sudoku from '../helpers/sudoku';
 
-console.log('sudoku functions: ', sudoku);
-
 const INITIAL_STATE = [
     ['', '', '', '', '', '', '', '', ''],
     ['', '', '', '', '', '', '', '', ''],

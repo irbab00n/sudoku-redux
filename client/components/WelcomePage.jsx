@@ -18,7 +18,7 @@ export default class WelcomePage extends React.Component {
         <div className="fw display-flex-row flex-align-center flex-justify-evenly flex-wrap">
           <PuzzleBoard actions={this.props.actions}/>
           <div className="signup-container bg-orange-light fh fw">
-            <button onClick={() => this.props.actions.checkPuzzleSolution()}>Submit Puzzle</button>
+            Signup container
           </div>
         </div>
       </div>
