@@ -53,7 +53,6 @@ li {
 }
 
 .page-body {
-  overflow: scroll;
   position: relative;
   left: 125px;
   margin: auto 145px auto 20px;
@@ -172,10 +171,13 @@ li {
 
 /* Puzzle Grid */
 
+.puzzle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .puzzle-grid {
-  max-width: 1000px;
-  max-height: 1000px;
   width: 60vh;
   height: 60vh;
   display: grid;
@@ -185,6 +187,12 @@ li {
   padding: 10px;
 }
 
+.puzzle-options {
+  width: 60vh;
+  height: 100px;
+  background-color: rgba(225, 225, 225, 1.0);
+}
+
 .grid-item {
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
@@ -192,7 +200,7 @@ li {
 .puzzle-box {
   height: 92%;
   width: 92%;
-  font-size: 4vh;
+  font-size: 3.5vh;
   text-align: center;
   border: none;
 }
@@ -210,17 +218,18 @@ li {
 .signup-container {
   margin-left: 20px;
   max-width: 400px;
-  height: 60vh;
+  height: 70vh;
 }
 
 @media all and (max-width: 1160px) {
   .signup-container {
     margin-left: 0px;
+    margin-top: 50px;
     max-width: none;
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1000px) and (orientation: portrait) {
   #sidebar {
     position: fixed;
     width: 100%;
@@ -239,10 +248,42 @@ li {
     flex-direction: column;
   }
 
+  .puzzle-grid {
+    height: 50vh;
+    width: 50vh;
+  }
+
+  .puzzle-options {
+    width: 50vh;
+    height: 150px;
+  }
+
   .page-body {
     top: 125px;
     left: 0px;
     margin: auto;
+  }
+}
+
+@media all and (max-width: 1000px) and (orientation: landscape) {
+  .puzzle-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .puzzle-grid {
+    height: 80vh;
+    width: 80vh;
+  }
+
+  .puzzle-box {
+    font-size: 5vh;
+  }
+
+  .puzzle-options {
+    flex-direction: row;
+    width: 40vh;
+    height: 80vh;
   }
 }
 

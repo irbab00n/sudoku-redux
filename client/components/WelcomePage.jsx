@@ -7,6 +7,11 @@ export default class WelcomePage extends React.Component {
     super(props);
   }
 
+  componentWillMount() {
+    // launch an AJAX request to the server that will fetch the random quickplay puzzle
+    // when the ajax request returns, dispatch an action to update the current puzzle in the state
+  }
+
   render() {
 
     return (
@@ -18,7 +23,7 @@ export default class WelcomePage extends React.Component {
         <div className="fw display-flex-row flex-align-center flex-justify-evenly flex-wrap">
           <PuzzleBoard actions={this.props.actions}/>
           <div className="signup-container bg-orange-light fh fw">
-            <button onClick={() => this.props.actions.checkPuzzleSolution()}>Submit Puzzle</button>
+            Signup container
           </div>
         </div>
       </div>
