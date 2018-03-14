@@ -54,8 +54,8 @@ li {
 
 .page-body {
   position: relative;
-  left: 125px;
-  margin: auto 145px auto 20px;
+  left: 10vh;
+  margin: auto 10vh auto auto;
 }
 
 .app-layout {
@@ -116,21 +116,20 @@ li {
 #sidebar {
   position: fixed;
   box-shadow: 2px 0px 4px #888888;
-  min-width: 125px;
-  max-width: 125px;
+  width: 10vh;
+  height: 100vh;
   z-index: 3000;
 }
 
 #sidebar-logo {
   margin: 12.5px;
-  height: 100px;
-  width: 100px;
+  width: 10vh;
+  height: 10vh;
 }
 
 #sidebar-navigation {
   justify-content: space-evenly;
   margin: 12.5px;
-  height: 200px;
   width: 100px;
 }
 
@@ -216,9 +215,15 @@ li {
 /* Signup */
 
 .signup-container {
-  margin-left: 20px;
-  max-width: 400px;
+  margin-top: 3vh;
+  max-width: 40vw;
   height: 70vh;
+}
+
+@media all and (max-width: 1260px) {
+  .signup-container {
+    max-width: 80vw;
+  }
 }
 
 @media all and (max-width: 1160px) {
