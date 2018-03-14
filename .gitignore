@@ -13,3 +13,7 @@ package-lock.json
 #local plan
 
 localplan.js
+
+# Webpack experiment
+
+webpack.common.js
