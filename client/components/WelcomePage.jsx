@@ -7,6 +7,11 @@ export default class WelcomePage extends React.Component {
     super(props);
   }
 
+  componentWillMount() {
+    // launch an AJAX request to the server that will fetch the random quickplay puzzle
+    // when the ajax request returns, dispatch an action to update the current puzzle in the state
+  }
+
   render() {
 
     return (
