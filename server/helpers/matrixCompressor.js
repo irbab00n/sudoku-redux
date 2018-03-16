@@ -1,4 +1,4 @@
-module.exports.compressMatrix = (matrix, key) => {
+module.exports.compress = (matrix, key) => {
   let compressedMatrix = '';
   matrix.forEach((row, index) => {
     let compressedRow = '';
@@ -13,11 +13,10 @@ module.exports.compressMatrix = (matrix, key) => {
     compressedMatrix += compressedRow + compressedEnd;
   })
   return compressedMatrix;
-}
+};
 
-module.exports.decompressMatrix = (compressedMatrix, key) => {
+module.exports.decompress = (compressedMatrix, key) => {
   let splitCompressed = compressedMatrix.split(',row');
-  console.log(splitCompressed);
   let decompressedMatrix = splitCompressed.map((row, index) => {
     if (index === splitCompressed.length - 1) {
       return row.split(key).slice(0, -1);
@@ -25,7 +24,7 @@ module.exports.decompressMatrix = (compressedMatrix, key) => {
     return row.split(key);
   });
   return decompressedMatrix;
-}
+};
 
 // function compressMatrix(matrix, key) {
 //   let compressedMatrix = '';
@@ -53,7 +52,7 @@ module.exports.decompressMatrix = (compressedMatrix, key) => {
 //     }
 //     return row.split(key);
 //   });
-//   return decompressedMatrix;
+//   return decommanpressedMatrix;
 // }
 
 // var easy = [
