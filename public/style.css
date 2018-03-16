@@ -215,21 +215,20 @@ li {
 /* Signup */
 
 .signup-container {
-  margin-top: 3vh;
   max-width: 40vw;
   height: 70vh;
 }
 
 @media all and (max-width: 1260px) {
   .signup-container {
+    margin-top: 3vh;
     max-width: 80vw;
   }
 }
 
 @media all and (max-width: 1160px) {
   .signup-container {
-    margin-left: 0px;
-    margin-top: 50px;
+    margin-top: 3vh;
     max-width: none;
   }
 }

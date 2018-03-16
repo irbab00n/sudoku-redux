@@ -4,10 +4,11 @@
   "description": "An online sudoku application",
   "main": "index.js",
   "scripts": {
+    "db-pg-dev-migrate": "knex migrate:latest",
+    "db-pg-dev-rollback": "knex migrate:rollback",
     "build": "webpack --mode production",
     "compile": "webpack --mode development --watch",
-    "server-dev": "nodemon server",
-    "start-dev": "npm run compile & npm run server-dev",
+    "start-dev": "npm run compile & nodemon server",
     "start": "npm run build & node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,8 +20,12 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "bookshelf": "^0.12.1",
     "express": "^4.16.2",
+    "knex": "^0.14.4",
+    "npm": "^5.7.1",
     "path": "^0.12.7",
+    "pg": "^7.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
