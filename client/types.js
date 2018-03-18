@@ -1,4 +1,4 @@
-export const EXAMPLE = 'EXAMPLE';
+
 
 // puzzles
 
