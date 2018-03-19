@@ -11,6 +11,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 
+app.get('/test', (req, res) => {
+  res.status(200).send('You have sent a request successfully');
+});
+
+
 app.get('/*', (req, res) => {
   res.sendFile(`${_public}/index.html`);
 });
